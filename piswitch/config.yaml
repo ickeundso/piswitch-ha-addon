@@ -17,12 +17,8 @@ ingress_port: 8099
 ingress_entry: "/"
 ingress_stream: true
 
-options:
-  backend_url: ""
-  ws_enabled: false
-schema:
-  backend_url: "url"
-  ws_enabled: "bool"
+options: {}
+schema: {}
 
 image: "maex-amd-1.fritz.box:4450/piswitch/piswitch3app-ha-{arch}"
 
