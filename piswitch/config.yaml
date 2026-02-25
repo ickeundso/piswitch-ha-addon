@@ -1,5 +1,5 @@
 name: "PiSwitch"
-version: "0.1.0"
+version: "0.2.0"
 slug: "piswitch"
 description: "IoT switch controller"
 arch:
@@ -7,6 +7,9 @@ arch:
 startup: "application"
 boot: "auto"
 init: false
+
+map:
+  - config:rw
 
 panel_icon: "mdi:toggle-switch"
 panel_title: "PiSwitch"
@@ -17,8 +20,16 @@ ingress_port: 8099
 ingress_entry: "/"
 ingress_stream: true
 
-options: {}
-schema: {}
+options:
+  mqtt_broker: ""
+  mqtt_username: ""
+  mqtt_password: ""
+  mqtt_client_id: "piswitch-ha"
+schema:
+  mqtt_broker: "str"
+  mqtt_username: "str"
+  mqtt_password: "password"
+  mqtt_client_id: "str"
 
 image: "maex-amd-1.fritz.box:4450/piswitch/piswitch3app-ha-{arch}"
 

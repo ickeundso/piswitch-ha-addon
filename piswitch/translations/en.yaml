@@ -1,7 +1,14 @@
 configuration:
-  backend_url:
-    name: Backend URL
-    description: URL of the PiSwitch backend API (e.g., http://192.168.1.100:3000)
-  ws_enabled:
-    name: WebSocket Enabled
-    description: Enable WebSocket connection for real-time updates
+  mqtt_broker:
+    name: MQTT Broker
+    description: "MQTT broker URL (e.g., tcp://192.168.1.100:1883)"
+  mqtt_username:
+    name: MQTT Username
+    description: Username for MQTT broker authentication
+  mqtt_password:
+    name: MQTT Password
+    description: Password for MQTT broker authentication
+  mqtt_client_id:
+    name: MQTT Client ID
+    description: Client ID for the MQTT connection (must be unique per broker)
+
