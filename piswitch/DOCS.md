@@ -2,22 +2,33 @@
 
 ## Overview
 
-This add-on serves the PiSwitch frontend as a panel in your Home Assistant sidebar. It connects to your existing PiSwitch backend running on the network.
+This add-on runs the PiSwitch IoT switch controller as a single Go binary inside Home Assistant. It serves the frontend, REST API, and WebSocket in one process — no separate backend needed.
 
 ## Configuration
 
-### `backend_url`
+### `mqtt_broker`
 
-The URL of your PiSwitch backend API, e.g., `http://192.168.1.100:3000`.
+MQTT broker URL, e.g., `tcp://192.168.1.100:1883`.
 
-### `ws_enabled`
+### `mqtt_username`
 
-Enable or disable WebSocket connections for real-time switch state updates.
+Username for MQTT broker authentication.
+
+### `mqtt_password`
+
+Password for MQTT broker authentication.
+
+### `mqtt_client_id`
+
+Client ID for the MQTT connection (must be unique per broker). Defaults to `piswitch-ha`.
 
 ## Usage
 
 1. Install the add-on from the Add-on Store
-2. Set the `backend_url` to point at your PiSwitch backend
-3. Optionally enable `ws_enabled` for real-time updates
-4. Start the add-on
-5. Click "PiSwitch" in the Home Assistant sidebar
+2. Configure the MQTT broker connection in the add-on settings
+3. Start the add-on
+4. Click "PiSwitch" in the Home Assistant sidebar
+
+## Data Storage
+
+Board configuration is stored in `/config/piswitch/` and persists across add-on updates.
