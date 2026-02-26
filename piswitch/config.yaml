@@ -1,5 +1,5 @@
 name: "PiSwitch"
-version: "0.2.10"
+version: "0.2.11"
 slug: "piswitch"
 description: "IoT switch controller"
 arch:
@@ -17,7 +17,7 @@ panel_admin: false
 
 ingress: true
 ingress_port: 8099
-ingress_entry: "/"
+ingress_entry: ""
 ingress_stream: true
 
 options:
