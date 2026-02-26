@@ -11,4 +11,7 @@ configuration:
   mqtt_client_id:
     name: MQTT Client ID
     description: Client ID for the MQTT connection (must be unique per broker)
+  timeout:
+    name: Request Timeout
+    description: HTTP request timeout in seconds for frontend API calls
 
