@@ -1,5 +1,5 @@
 name: "PiSwitch"
-version: "0.2.16"
+version: "0.2.17"
 slug: "piswitch"
 description: "IoT switch controller"
 arch:
@@ -33,6 +33,6 @@ schema:
   mqtt_client_id: "str"
   timeout: "int"
 
-image: "maex-amd-1.fritz.box:4450/piswitch/piswitch3app-ha-{arch}"
+image:  "ghcr.io/ickeundso/piswitch3app-ha-{arch}"
 
 watchdog: "http://[HOST]:[PORT:8099]/"
