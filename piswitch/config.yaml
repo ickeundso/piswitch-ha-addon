@@ -1,5 +1,5 @@
 name: "PiSwitch"
-version: "0.2.28"
+version: "0.2.29"
 slug: "piswitch"
 description: "IoT switch controller"
 arch:
